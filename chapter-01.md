@@ -44,4 +44,4 @@
 - 有demo实战演示
 - 低门槛 接触过CSS均可听懂
 - 实用 没有奇技淫巧
-![](https://github.com/guanqing123/css_comprehensive_speak/blob/master/chapter-01-1.png)
+![](https://github.com/guanqing123/css_comprehensive_speak/blob/master/chapter-01-01.png)
