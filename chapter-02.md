@@ -141,3 +141,4 @@
 	- 行内 inline
 	- inline-block
 - 按内容分
+![](https://github.com/guanqing123/css_comprehensive_speak/blob/master/chapter-02-01.png)
