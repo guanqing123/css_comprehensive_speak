@@ -140,3 +140,4 @@
 	- 块级 block
 	- 行内 inline
 	- inline-block
+- 按内容分
