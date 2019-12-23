@@ -8,3 +8,4 @@
 - [2-2 HTML常见元素和理解(2)](chapter-02.md#2-2-HTML常见元素和理解(2))
 - [2-3 HTML常见元素和理解(3)](chapter-02.md#2-3-HTML常见元素和理解(3))
 - [2-4 HTML版本](chapter-02.md#2-4-HTML版本)
+- [2-5 元素分类](chapter-02.md#2-5-元素分类)
