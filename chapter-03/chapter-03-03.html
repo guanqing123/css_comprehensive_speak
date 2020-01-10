@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>font</title>
+    <style>
+        body{
+            /*font-family: "monaco";*/
+            /*font-family: "monaco", "PingFang SC";*/
+            font-family: "aaaaa", "monaco", "PingFang SC";
+        }
+        .chinese{
+            font-family: "PingFang SC", "Microsoft YaHei", monospace;
+            /*font-family: "Microsoft YaHei" Serif;*/
+            /*font-family: Serif;*/
+        }
+        @font-face {
+            font-family: "IF";
+            /*这里可以请求远程字体,但是要注意是不是跨域.如果跨域,需求对方服务器出具 CORS 的头*/
+            src: url("./IndieFlower.ttf");
+        }
+        .custom-font{
+            font-family: IF;
+        }
+    </style>
+</head>
+<body class="body" id="body">
+    Hello world 你好，世界
+    <div class="chinese">你好</div>
+    <div class="custom-font">你好 Hello World</div>
+</body>
+</html>
