@@ -9,3 +9,6 @@
 - [2-3 HTML常见元素和理解(3)](chapter-02.md#2-3-HTML常见元素和理解(3))
 - [2-4 HTML版本](chapter-02.md#2-4-HTML版本)
 - [2-5 元素分类](chapter-02.md#2-5-元素分类)
+- [2-6 嵌套关系](chapter-02.md#2-6-嵌套关系)
+- [2-7 默认样式和reset](chapter-02.md#2-7-默认样式和reset)
+- [2-8 真题](chapter-02.md#2-8-真题)
