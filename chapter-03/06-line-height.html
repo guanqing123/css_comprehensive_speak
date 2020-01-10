@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>line-height</title>
+    <style>
+        .cc1{
+            font-size:12px;
+        }
+        .cc2{
+            font-size:18px;
+        }
+        .cc3{
+            font-size:24px;
+        }
+    </style>
+</head>
+<body>
+    <div style="border:solid 1px red;">
+        <span style="background:blue;color:#fff;font-size:20px;line-height:60px;">
+            居中xfg&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        </span></div>
+    <div class="c1">
+        <!--cc1,cc2,cc3默认是按照baseline对齐的,如果要改变对齐方式：给cc1,cc2,cc3都设置vertical-align: middle;-->
+        <!--vertical-align:也可以设置像素,像素是相对于基线来调整的.-->
+        <span class="cc1">第一段</span>
+        <span class="cc2">第二段</span>
+        <span class="cc3">第三段</span>
+    </div>
+    <div style="background:red">
+        <span>文字</span>
+        <!--
+            图片与底线之间有空隙,啥原因造成的。
+            原因：img相当于inline的元素,inline的元素就要遵守行高的构成.他会按照baseline对齐.基线与底线之间是有一段间隙的.
+            缝隙大小视字体大小而定,如果字体大小是 12px;那么缝隙大小就在 3px左右,这就是经典的 “图片3px缝隙问题”
+            解决方法一：vertical-align:bottom;按底线对齐
+            方法二：display:block;
+        -->
+        <img src="test.png"/>
+    </div>
+    <div>
+        <div style="float:left">
+            <span>第一段</span>
+        </div>
+        <div style="float:left">
+            <span>第二段</span>
+        </div>
+    </div>
+</body>
+</html>
