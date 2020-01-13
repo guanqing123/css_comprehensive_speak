@@ -14,3 +14,36 @@
 - flexbox 布局
 
 ### 4-2 布局方式(表格) ###
+#### html ####
+<pre>
+&lt;div class="table"&gt;
+    &lt;div class="table-row"&gt;
+        &lt;div class="left table-cell"&gt;
+            左
+        &lt;/div&gt;
+        &lt;div class="right table-cell"&gt;
+            右
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+#### css ####
+<pre>
+.table{
+    margin-top:20px;
+    display: table;
+    width:800px;
+    height:200px;
+}
+.table-row{
+    display: table-row;
+}
+.table-cell{
+    vertical-align: center;
+    display: table-cell;
+}
+</pre>
+
+### 4-3 一些布局属性 ###
+#### 盒模型 ####
+![](https://github.com/guanqing123/css_comprehensive_speak/blob/master/chapter-04-01.png)

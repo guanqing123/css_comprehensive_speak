@@ -81,10 +81,12 @@
 - 基线 默认对齐方式
 
 #### 图片间隙问题 ####
-`<div style="background:red">
-    <span>文字</span>
-    <img src="test.png"/>
-</div>`
+<pre>
+&lt;div style="background:red"&gt;
+    &lt;span&gt;文字&lt;/span&gt;
+    &lt;img src="test.png"/&gt;
+&lt;/div&gt;
+</pre>
 <pre>
 图片与底线之间有空隙,啥原因造成的。
 原因：img相当于inline的元素,inline的元素就要遵守行高的构成.他会按照baseline对齐.基线与底线之间是有一段间隙的.
