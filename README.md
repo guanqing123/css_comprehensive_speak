@@ -31,3 +31,11 @@
 ### 第4章  ###
 - [4-1 布局简介](chapter-03.md#4-1-布局简介)
 - [4-2 布局方式(表格)](chapter-03.md#4-2-布局方式(表格))
+- [4-3 一些布局属性](chapter-03.md#4-3-一些布局属性)
+- [4-4 flexbox布局](chapter-03.md#4-4-flexbox布局)
+- [4-5 float布局](chapter-03.md#4-5-float布局)
+- [4-6 inline-block布局](chapter-03.md#4-6-inline-block布局)
+- [4-7 响应式布局(1)](chapter-03.md#4-7-响应式布局(1))
+- [4-8 响应式布局(2)](chapter-03.md#4-8-响应式布局(2))
+- [4-9 主流网站使用的布局方式](chapter-03.md#4-9-主流网站使用的布局方式)
+- [4-10 CSS面试题](chapter-03.md#4-10-CSS面试题)

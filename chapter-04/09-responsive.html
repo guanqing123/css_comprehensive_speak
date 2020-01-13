@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>responsive</title>
+    <style>
+        .container{
+            margin: 0 auto;
+            max-width: 800px;
+            border: 1px solid black;
+        }
+        .intro{
+            display: inline-block;
+            width: 180px;
+            height: 180px;
+            line-height: 180px;
+            text-align: center;
+            border-radius: 90px;
+            border: 1px solid red;
+            margin: 7px;
+        }
+        @media (max-width: 640px) {
+            .intro {
+                margin: 7px auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            介绍1
+        </div>
+        <div class="intro">
+            介绍2
+        </div>
+        <div class="intro">
+            介绍3
+        </div>
+        <div class="intro">
+            介绍4
+        </div>
+    </div>
+</body>
+</html>
