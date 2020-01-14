@@ -41,7 +41,7 @@
 - label[for]
 
 ### 2-2 HTML常见元素和理解(2) ###
-详见 chapter-02/chapter-02-01.html
+详见 chapter-02/01-html-ele.html
 
 ### 2-3 HTML常见元素和理解(3) ###
 #### 如何理解HTML ####
@@ -112,9 +112,9 @@
 </table>
 
 - XHTML
-	- 详见 chapter-02-03.xhtml
+	- 详见 03-valid-xhtml.xhtml
 - HTML5
-	- 详见 chapter-02-04.html
+	- 详见 04-valid-html.html
 
 #### HTML5新增内容 ####
 - 新区块标签
