@@ -48,3 +48,14 @@
 - [5-5 clip-path](chapter-05.md#5-5-clip-path)
 - [5-6 3D-transform](chapter-05.md#5-6-3D-transform)
 - [5-7 CSS面试真题](chapter-05.md#5-7-CSS面试真题)
+
+### 第6章 ###
+- [6-1 box-shadow](chapter-06.md#6-1-box-shadow)
+- [6-2 transition动画(1)](chapter-06.md#6-2-transition动画(1))
+- [6-3 transition动画(2)](chapter-06.md#6-3-transition动画(2))
+- [6-4 关键帧动画](chapter-06.md#6-4-关键帧动画)
+- [6-5 逐帧动画](chapter-06.md#6-5-逐帧动画)
+- [6-6 CSS面试真题](chapter-06.md#6-6-CSS面试真题)
+
+### 第7章 ###
+- [7-1 box-shadow](chapter-07.md#7-1-box-shadow)
