@@ -28,7 +28,7 @@
 - [3-12 面试题(1)](chapter-03.md#3-12-面试题(1))
 - [3-13 面试题(2)](chapter-03.md#3-13-面试题(2))
 
-### 第4章  ###
+### 第4章 CSS布局 ###
 - [4-1 布局简介](chapter-04.md#4-1-布局简介)
 - [4-2 布局方式(表格)](chapter-04.md#4-2-布局方式(表格))
 - [4-3 一些布局属性](chapter-04.md#4-3-一些布局属性)
@@ -40,7 +40,7 @@
 - [4-9 主流网站使用的布局方式](chapter-04.md#4-9-主流网站使用的布局方式)
 - [4-10 CSS面试题](chapter-04.md#4-10-CSS面试题)
 
-### 第5章 ###
+### 第5章 CSS效果 ###
 - [5-1 box-shadow](chapter-05.md#5-1-box-shadow)
 - [5-2 text-shadow](chapter-05.md#5-2-text-shadow)
 - [5-3 border-radius](chapter-05.md#5-3-border-radius)
@@ -49,7 +49,7 @@
 - [5-6 3D-transform](chapter-05.md#5-6-3D-transform)
 - [5-7 CSS面试真题](chapter-05.md#5-7-CSS面试真题)
 
-### 第6章 ###
+### 第6章 CSS动画 ###
 - [6-1 box-shadow](chapter-06.md#6-1-box-shadow)
 - [6-2 transition动画(1)](chapter-06.md#6-2-transition动画(1))
 - [6-3 transition动画(2)](chapter-06.md#6-3-transition动画(2))
@@ -57,5 +57,9 @@
 - [6-5 逐帧动画](chapter-06.md#6-5-逐帧动画)
 - [6-6 CSS面试真题](chapter-06.md#6-6-CSS面试真题)
 
-### 第7章 ###
-- [7-1 box-shadow](chapter-07.md#7-1-box-shadow)
+### 第7章 预处理器 ###
+- [7-1 介绍](chapter-07.md#7-1-介绍)
+- [7-2 less嵌套](chapter-07.md#7-2-less嵌套)
+- [7-3 sass嵌套(1)](chapter-07.md#7-3-sass嵌套(1))
+- [7-4 sass嵌套(2)](chapter-07.md#7-4-sass嵌套(2))
+
