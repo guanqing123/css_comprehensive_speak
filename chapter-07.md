@@ -110,3 +110,120 @@ body{
     }
 }
 </pre>
+
+### 7-6 sass变量 ###
+#### variable.scss ####
+<pre>
+$fontSize: 12px;
+$bgColor: red;
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.wrapper{
+    background:lighten($bgColor, 40%);
+
+    .nav{
+        font-size: $fontSize;
+    }
+    .content{
+        font-size: $fontSize + 2px;
+        &:hover{
+            background:$bgColor;
+        }
+    }
+}
+</pre>
+#### 编译 ####
+<pre>
+chapter-07\node_modules\.bin>node-sass --output-style expanded ../../2-variable.scss>../../2-variable-scss.css
+</pre>
+
+### 7-7 less mixin ###
+#### mixin.less ####
+<pre>
+@fontSize: 12px;
+@bgColor: red;
+
+.box{
+    color:green;
+}
+// 这里加()和不加都没有关系,但是加了box就不会被编译出来
+.box(){
+	color:green;
+}
+
+.box1{
+    .box();
+    line-height: 2em;
+}
+.box2{
+    .box();
+    line-height: 3em;
+}
+
+.block(@fontSize){
+    font-size: @fontSize;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.wrapper{
+    background:lighten(@bgColor, 40%);
+
+    .nav{
+        .block(@fontSize);
+    }
+    .content{
+        .block(@fontSize + 2px);
+        &:hover{
+            background:red;
+        }
+    }
+}
+</pre>
+#### 编译 ####
+<pre>
+chapter-07\node_modules\.bin>lessc ../../3-mixin.less>../../3-mixin.css
+</pre>
+
+### 7-8 sass mixin ###
+#### mixin.scss ####
+<pre>
+
+$fontSize: 12px;
+$bgColor: red;
+
+@mixin block($fontSize){
+    font-size: $fontSize;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.wrapper{
+    background:lighten($bgColor, 40%);
+
+    .nav{
+        @include block($fontSize);
+    }
+    .content{
+        @include block($fontSize + 2px);
+        &:hover{
+            background:red;
+        }
+    }
+}
+</pre>
