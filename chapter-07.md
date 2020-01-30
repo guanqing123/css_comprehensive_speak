@@ -7,10 +7,12 @@
 - 添加了很多CSS不具备的特性
 - 能提升CSS文件的组织
 - {less} vs Sass
+	- less 基于node写的,是用js写的,所以编译比较快
+	- sass 是用ruby写的,编译比较慢
 #### CSS预处理器功能 ####
 - 嵌套 反映层级和约束
 - 变量和计算 减少重复代码
-- Extend和Mixin 代码片段
+- Extend 和 Mixin 代码片段(类似js函数)
 - 循环 适用于复杂有规律的样式
 - import CSS文件模块化
 
@@ -103,6 +105,7 @@ body{
         font-size: @fontSize;
     }
     .content{
+        // 如果是乘法 就不用写 px 单位
         font-size: @fontSize + 2px;
         &:hover{
             background:@bgColor;
@@ -226,4 +229,124 @@ body{
         }
     }
 }
+</pre>
+#### 编译 ####
+<pre>
+chapter-07\node_modules\.bin>node-sass --output-style expanded ../../3-mixin.scss>  ../../3-mixin-scss.css
+</pre>
+
+### 7-9 less extend ###
+#### extend.less ####
+<pre>
+@fontSize: 12px;
+@bgColor: red;
+
+.block{
+    font-size: @fontSize;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.wrapper{
+    background:lighten(@bgColor, 40%);
+
+    .nav:extend(.block){
+        color: #333;
+    }
+    .content{	// .content:extend(.block){}等价于.content{&:extend(.block);}
+        &:extend(.block);
+        &:hover{
+            background:red;
+        }
+    }
+}
+</pre>
+#### 编译 ####
+<pre>
+lessc ../../4-extend.less ../../4-extend.css
+</pre>
+
+### 7-10 sass extend ###
+#### extend.scss ####
+<pre>
+$fontSize: 12px;
+$bgColor: red;
+
+.block{
+    font-size: $fontSize;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.wrapper{
+    background:lighten($bgColor, 40%);
+
+    .nav{
+        @extend .block;
+        color: #333;
+    }
+    .content{
+        @extend .block;
+        &:hover{
+            background:red;
+        }
+    }
+}
+</pre>
+#### 编译 ####
+<pre>
+chapter-07\node_modules\.bin>node-sass --output-style expanded ../../4-extend.scss> ../../4-extend-scss.css
+</pre>
+
+### 7-11 less loop ###
+#### loop.less ####
+<pre>
+.gen-col(@n) when (@n > 0){
+    .gen-col(@n - 1);
+    .col-@{n}{
+        width: 1000px/12*@n;
+    }
+}
+
+.gen-col(12);
+</pre>
+#### 编译 ####
+<pre>
+lessc ../../5-loop.less> ../../5-loop.css
+</pre>
+
+### 7-12 sass loop ###
+#### loop.scss ####
+<pre>
+ @mixin gen-col($n){
+     @if $n > 0 {
+         @include gen-col($n - 1);
+         .col-#{$n}{
+             width: 1000px/12*$n;
+         }
+     }
+ }
+
+ @include gen-col(12);
+</pre>
+<pre>
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: 1000px/12*$i;
+    }
+}
+</pre>
+#### 编译 ####
+<pre>
+chapter-07\node_modules\.bin>node-sass --output-style expanded ../../5-loop.scss> ../../5-loop-scss.css
 </pre>

@@ -65,4 +65,5 @@
 - [7-5 less变量](chapter-07.md#7-5-less变量)
 - [7-6 sass变量](chapter-07.md#7-6-sass变量)
 - [7-7 less mixin](chapter-07.md#7-7-less-mixin)
+- [7-8 sass mixin](chapter-07.md#7-8-sass-mixin)
 
