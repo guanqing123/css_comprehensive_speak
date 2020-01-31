@@ -9,7 +9,8 @@
   "author": "guanqing",
   "license": "ISC",
   "devDependencies": {
-    "less": "^3.10.3",
+    "less": "^2.7.3",
     "node-sass": "^4.13.1"
-  }
+  },
+  "dependencies": {}
 }
