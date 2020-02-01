@@ -78,3 +78,6 @@
 
 ### 第8章 Bootstrap ###
 - [8-1 Bootstrap介绍](chapter-08.md#8-1-Bootstrap介绍)
+- [8-2 Bootstrap基本用法(1)](chapter-08.md#8-2-Bootstrap基本用法(1))
+- [8-3 Bootstrap基本用法(2)](chapter-08.md#8-3-Bootstrap基本用法(2))
+- [8-4 Bootstrap JS组件](chapter-08.md#8-4-Bootstrap-JS组件)
