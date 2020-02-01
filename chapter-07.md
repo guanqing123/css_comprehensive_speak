@@ -307,6 +307,8 @@ body{
 <pre>
 chapter-07\node_modules\.bin>node-sass --output-style expanded ../../4-extend.scss> ../../4-extend-scss.css
 </pre>
+#### Extend 和 Mixin 的区别 ####
+作用都是在样式内部完成样式的复用，但最后代码编译后生成的结果不同，Mixin是直接把代码复制过来，而Extend是把选择器提取出来把公共的样式写在一起，减少了很多一样的代码。
 
 ### 7-11 less loop ###
 #### loop.less ####
@@ -350,3 +352,199 @@ lessc ../../5-loop.less> ../../5-loop.css
 <pre>
 chapter-07\node_modules\.bin>node-sass --output-style expanded ../../5-loop.scss> ../../5-loop-scss.css
 </pre>
+
+### 7-13 less import ###
+#### import-main.less ####
+<pre>
+@import "import-variable";
+@import "import-module1";
+@import "import-module2";
+</pre>
+#### import-variable.less ####
+<pre>
+@themeColor: blue;
+@fontSize: 14px;
+</pre>
+#### import-module1.less ####
+<pre>
+.module1{
+    .box{
+        font-size:@fontSize + 2px;
+        color:@themeColor;
+    }
+    .tips{
+        font-size:@fontSize;
+        color:lighten(@themeColor, 40%);
+    }
+}
+</pre>
+#### import-module2.less ####
+<pre>
+.module2{
+    .box{
+        font-size:@fontSize + 4px;
+        color:@themeColor;
+    }
+    .tips{
+        font-size:@fontSize + 2px;
+        color:lighten(@themeColor, 20%);
+    }
+}
+</pre>
+#### 编译 ####
+<pre>
+chapter-07\node_modules\.bin>lessc ../../import-main.less> ../../import-main.css
+</pre>
+#### import-main.css ####
+<pre>
+.module1 .box {
+  font-size: 16px;
+  color: blue;
+}
+.module1 .tips {
+  font-size: 14px;
+  color: #ccccff;
+}
+.module2 .box {
+  font-size: 18px;
+  color: blue;
+}
+.module2 .tips {
+  font-size: 16px;
+  color: #6666ff;
+}
+</pre>
+
+### 7-14 sass import ###
+#### import-main.scss ####
+<pre>
+@import "import-variable";
+@import "import-module1";
+@import "import-module2";
+</pre>
+#### import-variable.scss ####
+<pre>
+$themeColor: blue;
+$fontSize: 14px;
+</pre>
+#### import-module1.scss ####
+<pre>
+.module1{
+    .box{
+        font-size:$fontSize + 2px;
+        color:$themeColor;
+    }
+    .tips{
+        font-size:$fontSize;
+        color:lighten($themeColor, 40%);
+    }
+}
+</pre>
+#### import-module2.scss ####
+<pre>
+.module2{
+    .box{
+        font-size:$fontSize + 4px;
+        color:$themeColor;
+    }
+    .tips{
+        font-size:$fontSize + 2px;
+        color:lighten($themeColor, 20%);
+    }
+}
+</pre>
+#### 编译 ####
+<pre>
+chapter-07\node_modules\.bin>node-sass --output-style expanded ../../import-main.scss> ../../import-main-scss.css
+</pre>
+#### import-main-scss.css ####
+<pre>
+.module1 .box {
+  font-size: 16px;
+  color: blue;
+}
+
+.module1 .tips {
+  font-size: 14px;
+  color: #ccccff;
+}
+
+.module2 .box {
+  font-size: 18px;
+  color: blue;
+}
+
+.module2 .tips {
+  font-size: 16px;
+  color: #6666ff;
+}
+</pre>
+
+### 7-15 预处理器框架(1) ###
+#### CSS预处理器框架 ####
+- SASS - Compass
+- Less - Lesshat/EST
+- 提供现成的mixin
+- 类似JS类库 封装常用功能
+
+### 7-16 预处理器框架(2) ###
+### est.less ###
+<pre>
+@import "est/all";
+
+@support-ie-version: 7;
+@use-autoprefixer: false;
+
+.global-reset();
+
+.box{
+    .inline-block();
+    .opacity(60);
+    height: 100px;
+    background: green;
+    margin:10px;
+}
+.left{
+    float:left;
+    .clearfix();
+}
+
+
+.row{
+    .make-row();
+    .col{
+        .make-column(1/4);
+        background:red;
+        height: 100px;
+    }
+}
+.my-triangle{
+    margin:100px;
+    // width:100px;
+    // height:200px;
+    // border: 1px solid red;
+}
+.my-triangle::after{
+    content: ' ';
+    .triangle(top left, 100px, red, side);
+}
+</pre>
+
+### 7-17 真题 ###
+#### CSS面试真题 ####
+- 常见的CSS预处理器
+	- Less(Node.js)
+	- Sass(Ruby 有Node版本)
+- 预处理器的作用
+	- 帮助更好地组织CSS代码
+	- 提高代码复用率
+	- 提升可维护性
+- 预处理器的能力
+	- 嵌套 反映层级和约束
+	- 变量和计算 减少重复代码
+	- Extend 和 Mixin 代码片段
+	- 循环 适用于复杂有规律的样式
+	- import CSS文件模块化
+- 预处理器的优缺点
+	- 优点：提高代码复用率和可维护性
+	- 缺点：需要引入编译过程 有学习成本
