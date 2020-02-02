@@ -81,3 +81,6 @@
 - [8-2 Bootstrap基本用法(1)](chapter-08.md#8-2-Bootstrap基本用法(1))
 - [8-3 Bootstrap基本用法(2)](chapter-08.md#8-3-Bootstrap基本用法(2))
 - [8-4 Bootstrap JS组件](chapter-08.md#8-4-Bootstrap-JS组件)
+- [8-5 Bootstrap 响应式布局](chapter-08.md#8-5-Bootstrap-响应式布局)
+- [8-6 Bootstrap 定制化](chapter-08.md#8-6-Bootstrap-定制化)
+- [8-7 CSS真题](chapter-08.md#8-7-CSS真题)
