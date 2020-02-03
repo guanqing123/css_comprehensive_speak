@@ -6,13 +6,13 @@ module.exports = {
     plugins: [
         atImport,
         autoprefixer({
-/*            overrideBrowserslist: [
+            overrideBrowserslist: [
                 "last 1 version",
                 "Firefox > 1"
                 // "> 0%",
                 // "IE 10"
-            ]*/
-            browsers: ['> 0%']
+            ]
+            // browsers: ['> 0%']
         }),
         cssnano
     ]

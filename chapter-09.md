@@ -143,3 +143,46 @@ chapter-09\node_modules\.bin>postcss ../../src/02-plugins-main.css -o ../../buil
 <pre>
 npm install cssnano
 </pre>
+#### postcss.config.js ####
+<pre>
+const autoprefixer = require('autoprefixer');
+const atImport = require('postcss-import');
+const cssnano = require('cssnano');
+module.exports = {
+    plugins: [
+        atImport,
+        autoprefixer({
+            overrideBrowserslist: [
+                "last 1 version",
+                "Firefox > 1"
+                // "> 0%",
+                // "IE 10"
+            ]
+            // browsers: ['> 0%']
+        }),
+        cssnano
+    ]
+}
+</pre>
+#### 编译 ####
+<pre>
+chapter-09\node_modules\.bin>postcss ../../src/02-plugins-main.css -o ../../build/02-plugins-main.css
+</pre>
+报错：
+<pre>
+{ BrowserslistError: Unknown browser query `basedir=$(dirname "$(echo "$0" | sed -e 's`. Maybe you are using old Browserslist or made typo in query.
+    at unknownQuery (C:\guanqing\practise\git\css_comprehensive_speak\chapter-09\node_modules\browserslist\index.js:244:10)
+    at C:\guanqing\practise\git\css_comprehensive_speak\chapter-09\node_modules\browserslist\index.js:331:11
+    at Array.reduce (<anonymous>)
+    at resolve (C:\guanqing\practise\git\css_comprehensive_speak\chapter-09\node_modules\browserslist\index.js:277:18)
+    at browserslist (C:\guanqing\practise\git\css_comprehensive_speak\chapter-09\node_modules\browserslist\index.js:401:21)
+    at cleanBrowsersList (C:\guanqing\practise\git\css_comprehensive_speak\chapter-09\node_modules\caniuse-api\dist\utils.js:59:59)
+    at setBrowserScope (C:\guanqing\practise\git\css_comprehensive_speak\chapter-09\node_modules\caniuse-api\dist\index.js:26:43)
+    at Object.<anonymous> (C:\guanqing\practise\git\css_comprehensive_speak\chapter-09\node_modules\caniuse-api\dist\index.js:88:1)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+  name: 'BrowserslistError',
+  message:
+   'Unknown browser query `basedir=$(dirname "$(echo "$0" | sed -e \'s`. Maybe you are using old Browserslist or made typo in query.',
+  browserslist: true }
+</pre>
