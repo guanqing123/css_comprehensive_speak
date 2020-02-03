@@ -83,3 +83,63 @@ chapter-09\node_modules\.bin>postcss ../../src/02-plugins-main.css -o ../../buil
             box-shadow: 0 0 3px rgba(255,255,255, .3);
 }
 </pre>
+
+#### postcss-import插件 ####
+<pre>
+npm install postcss-import
+</pre>
+#### postcss.config.js ####
+<pre>
+const autoprefixer = require('autoprefixer');
+const atImport = require('postcss-import');
+module.exports = {
+    plugins: [
+        atImport,
+        autoprefixer({
+            overrideBrowserslist: [
+                "last 1 version",
+                "Firefox > 1"
+                // "> 0%",
+                // "IE 10"
+            ]
+        })
+    ]
+}
+</pre>
+#### src/02-plugins-main.css ####
+<pre>
+@import "./02-plugins-module.css";
+
+.box{
+    box-shadow: 0 0 3px rgba(255,255,255, .3);
+}
+</pre>
+#### src/02-plugins-module.css ####
+<pre>
+*{
+    margin: 0;
+    padding: 0;
+}
+</pre>
+#### 编译 ####
+<pre>
+chapter-09\node_modules\.bin>postcss ../../src/02-plugins-main.css -o ../../build/02-plugins-main.css
+</pre>
+#### build/02-plugins-main.css ####
+<pre>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    -moz-box-shadow: 0 0 3px rgba(255,255,255, .3);
+         box-shadow: 0 0 3px rgba(255,255,255, .3);
+}
+</pre>
+
+### 9-3 PostCSS插件的使用(2) ###
+#### cssnano插件 ####
+<pre>
+npm install cssnano
+</pre>
