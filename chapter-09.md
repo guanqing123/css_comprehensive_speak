@@ -543,3 +543,4 @@ chapter-09>.\node_modules\.bin\webpack src/07-webpack-main.js build/07-webpack-m
 	- JS作为入口,管理资源有天然优势
 	- 将组件的结构、样式、行为封装到一起,增强内聚
 	- 可以做更多处理(webpack)
+
