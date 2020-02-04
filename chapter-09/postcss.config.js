@@ -1,10 +1,13 @@
-const autoprefixer = require('autoprefixer');
+/*const autoprefixer = require('autoprefixer');
 const atImport = require('postcss-import');
-const cssnano = require('cssnano');
-
+const cssnano = require('cssnano');*/
+// const cssnext = require('postcss-cssnext');
+const precss = require('precss');
 module.exports = {
     plugins: [
-        atImport,
+        precss
+        // cssnext
+/*        atImport,
         autoprefixer({
             overrideBrowserslist: [
                 "last 1 version",
@@ -12,8 +15,7 @@ module.exports = {
                 // "> 0%",
                 // "IE 10"
             ]
-            // browsers: ['> 0%']
         }),
-        cssnano
+        cssnano*/
     ]
 }
