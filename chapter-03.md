@@ -101,7 +101,12 @@
 - 背景颜色
 - 渐变色背景
 - 多背景叠加
+	- 示例：chapter-03/07-background.html
 - 背景图片和属性(雪碧图)
+	- 难点：
+		- background-position
+		- background-size
+	- 示例：chapter-03/08-background-image.html
 - base64和性能优化
 - 多分辨率适配
 
