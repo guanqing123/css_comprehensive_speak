@@ -65,6 +65,7 @@
 	- serif sans-serif monospace cursive fantasy
 - 多字体fallback
 - 网络字体、自定义字体
+	- @font-face
 - iconfont 
 	- https://www.iconfont.cn/
 - demo
