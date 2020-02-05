@@ -231,7 +231,7 @@
 - 8.property和attribute的区别
 	- attribute是“死”的
 	- property是“活”的
-	- <pre>`<input type="text" value="1">`<br/>$0<br/>`<input type="text" value="1">`<br/>$0.value<br/>"1"<br/>$0.value="2"<br/>"2"<br/>$0.value<br/>"2"<br/>$0.getAttribute('value')<br/>"1"<br/>$0.setAttribute('value', '3')<br/>undefined<br/>$0<br/>`<input type="text" value="3">`</pre>
+	- <pre>&lt;input type="text" value="1"&gt;<br/>$0<br/>&lt;input type="text" value="1"&gt;<br/>$0.value<br/>"1"<br/>$0.value="2"<br/>"2"<br/>$0.value<br/>"2"<br/>$0.getAttribute('value')<br/>"1"<br/>$0.setAttribute('value', '3')<br/>undefined<br/>$0<br/>&lt;input type="text" value="3"&gt;</pre>
 - 9.form的作用有哪些
 	- 直接提交表单
 	- 使用submit/reset按钮
